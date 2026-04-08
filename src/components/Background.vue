@@ -26,8 +26,8 @@
         return {
             position: 'absolute',
             transform: `translate(${xOffset}px, ${yOffset}px) scale(${1 + paralaxPower * 0.5})`,
-            width: "100%",
-            height: "100%",
+            width: "100vw",
+            height: "100vh",
             objectFit: 'cover',
             objectPosition: 'center',
             zIndex: '-1',
@@ -51,11 +51,9 @@
 
 
 <template>
-    <section class="w-screen h-screen overflow-hidden ">
-        <img class="overflow-hidden" 
-            :src="`/src/assets/Backgrounds/${currentBackground}`" 
-            :style="imageStyle"
-            alt="Background"
-        >
-    </section>
+    <img class="overflow-hidden" 
+        :src="`/src/assets/Backgrounds/${currentBackground}`" 
+        :style="imageStyle"
+        alt="Background"
+    >
 </template>
