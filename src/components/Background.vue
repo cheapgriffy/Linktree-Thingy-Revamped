@@ -10,7 +10,6 @@
 
     const backgroundImages = ref([
         'lake.gif',
-        'ping_tiled_backgorund.mp4',
         'unknown_land.gif',
         'wiggly_tuff_guild_night.gif'
     ]);
