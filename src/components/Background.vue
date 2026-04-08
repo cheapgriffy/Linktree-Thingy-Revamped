@@ -2,6 +2,7 @@
     import { ref, computed, onMounted } from 'vue';
     import { getRandomInt, distanceToPourcentage } from '../assets/js/GlobalClasses';
     import { useMouse, useWindowSize } from '@vueuse/core';
+    import { paralaxPower } from '../assets/js/settings';
 
     
     const { x, y, sourceType } = useMouse();
@@ -15,16 +16,15 @@
     ]);
     
     const currentBackground = ref('');
-    
-    let paralaxPower = 0.2;
 
+    //paralax effect
     const imageStyle = computed(() => {
-        const xOffset = distanceToPourcentage(x.value, width.value/2) * paralaxPower * -1;
-        const yOffset = distanceToPourcentage(y.value, height.value/2) * paralaxPower * -1;
+        const xOffset = distanceToPourcentage(x.value, width.value/2) * paralaxPower.value * -1;
+        const yOffset = distanceToPourcentage(y.value, height.value/2) * paralaxPower.value * -1;
         
         return {
             position: 'absolute',
-            transform: `translate(${xOffset}px, ${yOffset}px) scale(${1 + paralaxPower * 0.5})`,
+            transform: `translate(${xOffset}px, ${yOffset}px) scale(${1 + paralaxPower.value * 0.5})`,
             width: "100vw",
             height: "100vh",
             objectFit: 'cover',

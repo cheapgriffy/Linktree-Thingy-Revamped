@@ -1,6 +1,8 @@
 <script setup>
-    import { ref } from 'vue';
+    import { ref, computed } from 'vue';
     import { useMouse, useWindowSize, onKeyStroke } from '@vueuse/core';
+    import { paralaxPower } from '../assets/js/settings';
+    import { distanceToPourcentage } from '../assets/js/GlobalClasses';
     
 
     const { x, y } = useMouse();
@@ -13,19 +15,47 @@
         is_debug_mode.value = !is_debug_mode.value;
     })
 
+
+    const paralaxpreview = computed(() => {
+        const xOffset = distanceToPourcentage(x.value, width.value/2) * paralaxPower.value;
+        const yOffset = distanceToPourcentage(y.value, height.value/2) * paralaxPower.value;
+        return{
+            transform: `translate(${xOffset}px, ${yOffset}px) scale(${1 + paralaxPower.value * 0.5})`,
+            position: 'relative',
+            top: "50%",
+            left: "50%",
+        }
+    })
+
 </script>
 
 <template>
-    <div v-if="is_debug_mode" class="bg-gray-800/80 w-50 p-5 rounded-lg font-[Outfit] font-light m-2">
-        <p style="mix-blend-mode:exclusion; color: white;">posX: {{ x }}</p> 
-        <p style="mix-blend-mode:exclusion; color: white;">posY: {{ y }}</p>
+    <div v-if="is_debug_mode" class="bg-gray-800/80 min-w-70 p-5 rounded-lg font-[Outfit] font-light m-2">
+        <div :style="{ width:width *0.04 + 'px', height:height * 0.05 + 'px' }" class="bg-black/50 ">
+            <div class="w-1 h-1 bg-red-500 rounded-full" :style='paralaxpreview'></div>
+        </div>
+        <div class="flex gap-5">
+            <p class="w-20 debug-label">posX: <strong>{{ x }}</strong></p>
+            <p class="w-20 debug-label">posY: <strong>{{ y }}</strong></p>
+        </div>
 
-        <p style="mix-blend-mode:exclusion; color: white;">screenW: {{ width }}</p> 
-        <p style="mix-blend-mode:exclusion; color: white;">screenH: {{ height }}</p>
+        <div class="flex gap-5">
+            <p class="debug-label">screenW: <strong>{{ width }}</strong></p>
+            <p class="debug-label">screenH: <strong>{{ height }}</strong></p>
+        </div>
 
-        <p style="mix-blend-mode:exclusion; color: white;">centerX: {{ width/2 }}</p> 
-        <p style="mix-blend-mode:exclusion; color: white;">centerY: {{ height/2 }}</p>
+        <div class="flex gap-5">
+            <p class="debug-label">centerX: <strong>{{ width/2 }}</strong></p>
+            <p class="debug-label">centerY: <strong>{{ height/2 }}</strong></p>
+        </div>
+
+        <p class="debug-label">paralaxPower: <strong>{{ paralaxPower }}</strong></p>
     </div>
 </template>
 
-
+<style>
+.debug-label{
+    mix-blend-mode:exclusion;
+    color: white
+}
+</style>
