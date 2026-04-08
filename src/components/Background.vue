@@ -24,14 +24,16 @@
         const yOffset = distanceToPourcentage(y.value, height.value/2) * paralaxPower * -1;
         
         return {
-            transform: `translate(${xOffset}px, ${yOffset}px)`,
-            width: '120%', 
-            height: '120%',
-            objectFit: 'cover',
             position: 'absolute',
-            top: '0%',
-            left: '0%',
-            pointerEvents: 'none'
+            transform: `translate(${xOffset}px, ${yOffset}px) scale(${1 + paralaxPower * 0.5})`,
+            width: "100%",
+            height: "100%",
+            objectFit: 'cover',
+            objectPosition: 'center',
+            zIndex: '-1',
+            top: "0%",
+            left: "0%",
+            pointerEvents: 'none',
         };
     });
 
@@ -49,9 +51,9 @@
 
 
 <template>
-    <section class="w-screen h-screen absolute text-white overflow-hidden">
+    <section class="w-screen h-screen overflow-clip">
         <p>{{ x }}</p> <p>{{ y }}</p>
-        <img 
+        <img class="overflow-hidden" 
             :src="`/src/assets/Backgrounds/${currentBackground}`" 
             :style="imageStyle"
             alt="Background"
