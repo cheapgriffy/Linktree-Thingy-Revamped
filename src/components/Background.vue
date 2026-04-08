@@ -51,8 +51,7 @@
 
 
 <template>
-    <section class="w-screen h-screen overflow-clip">
-        <p>{{ x }}</p> <p>{{ y }}</p>
+    <section class="w-screen h-screen overflow-hidden ">
         <img class="overflow-hidden" 
             :src="`/src/assets/Backgrounds/${currentBackground}`" 
             :style="imageStyle"
