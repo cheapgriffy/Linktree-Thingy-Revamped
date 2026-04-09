@@ -1,7 +1,7 @@
 <script setup>
     import { ref, computed } from 'vue';
     import { useMouse, useWindowSize, onKeyStroke } from '@vueuse/core';
-    import { paralax_power } from '../assets/js/settings';
+    import { paralax_power, links_list } from '../assets/js/settings';
     import { distanceToPourcentage } from '../assets/js/GlobalClasses';
     
 
@@ -9,7 +9,7 @@
     const { width, height } = useWindowSize();
 
     // to know, this.value is not needed, ref.value is only in script
-    const is_debug_mode = ref(false);
+    const is_debug_mode = ref(true);
 
     onKeyStroke("k", (e) => {
         is_debug_mode.value = !is_debug_mode.value;
@@ -31,9 +31,11 @@
 
 <template>
     <div v-if="is_debug_mode" class="bg-gray-800/80 min-w-70 p-5 rounded-lg font-[Outfit] font-light m-2">
-        <div :style="{ width:width *0.04 + 'px', height:height * 0.05 + 'px' }" class="bg-black/50 ">
-            <div class="w-1 h-1 bg-red-500 rounded-full" :style='paralaxpreview'></div>
+        
+        <div :style="{ width:width * 0.04 + 'px', height:height * 0.04 + 'px' }" class="bg-black/50 ">
+            <div class="w-1 h-1 bg-white rounded-full" :style='paralaxpreview'></div>
         </div>
+
         <div class="flex gap-5">
             <p class="w-20 debug-label">posX: <strong>{{ x }}</strong></p>
             <p class="w-20 debug-label">posY: <strong>{{ y }}</strong></p>
@@ -50,6 +52,18 @@
         </div>
 
         <p class="debug-label">paralax_power: <strong>{{ paralax_power }}</strong></p>
+
+        <span class="bg-white/20 w-full h-0.5 block rounded-4xl my-2"></span>
+
+        <ul class="block">
+        <template v-for="item in links_list" :key="item.title">
+            <li>
+                <input v-model="item.active" type="checkbox">
+                <label for="item.title" class="debug-label">{{ item.title }}</label>
+            </li>
+        </template>
+        </ul>
+
     </div>
 </template>
 

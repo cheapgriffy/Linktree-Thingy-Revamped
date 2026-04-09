@@ -27,6 +27,7 @@
             top: "0%",
             left: "0%",
             pointerEvents: 'none',
+            filter: 'blur(5px)',
         };
     });
 
