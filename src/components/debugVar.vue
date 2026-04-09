@@ -51,7 +51,7 @@
             <p class="debug-label">centerY: <strong>{{ height/2 }}</strong></p>
         </div>
 
-        <p class="debug-label">paralax_power: <strong>{{ paralax_power }}</strong></p>
+        <p class="debug-label">paralax_power: <input class="w-20" type="text" v-model="paralax_power"></input></p>
 
         <span class="bg-white/20 w-full h-0.5 block rounded-4xl my-2"></span>
 

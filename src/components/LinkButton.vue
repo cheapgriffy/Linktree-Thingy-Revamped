@@ -1,8 +1,8 @@
 <script setup>
+// act as flags for components
 defineProps({
     link_obj: Object,
 })
-
 
 </script>
 
@@ -25,6 +25,7 @@ defineProps({
     width: clamp(300px, 350px + 2vw, 500px);
 }
 
+/* imported from old repo, TODO update to tailwind standards */
 .link-btn {
     text-shadow: 13px;
     border: solid #424242 2px;
