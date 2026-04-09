@@ -4,14 +4,11 @@
     import { useMouse, useWindowSize } from '@vueuse/core';
     import { paralax_power, curr_bg_image, bg_images } from '../assets/js/settings';
 
-    
     const { x, y, sourceType } = useMouse();
     const { width, height } = useWindowSize();
     
-
-
-
-    //paralax effect
+    // paralax works
+    // send reactively css variables to background
     const imageStyle = computed(() => {
         const xOffset = distanceToPourcentage(x.value, width.value/2) * paralax_power.value * -1;
         const yOffset = distanceToPourcentage(y.value, height.value/2) * paralax_power.value * -1;
@@ -31,21 +28,21 @@
         };
     });
 
-    
+    // random background set
     const setRandomBackground = () => {
         const randomIndex = getRandomInt(0, bg_images.value.length - 1);
         curr_bg_image.value = bg_images.value[randomIndex];
     };
 
-    
+    // mandatory inside of <script setup>
+    // fonction would be undefined otherwise
     onMounted(() => {
         setRandomBackground();
     });
 </script>
 
-
 <template>
-    <img class="overflow-hidden" 
+    <img  
         :src="`/src/assets/Backgrounds/${curr_bg_image}`" 
         :style="imageStyle"
         alt="Background"
