@@ -2,29 +2,23 @@
     import { ref, computed, onMounted } from 'vue';
     import { getRandomInt, distanceToPourcentage } from '../assets/js/GlobalClasses';
     import { useMouse, useWindowSize } from '@vueuse/core';
-    import { paralaxPower } from '../assets/js/settings';
+    import { paralax_power, curr_bg_image, bg_images } from '../assets/js/settings';
 
     
     const { x, y, sourceType } = useMouse();
     const { width, height } = useWindowSize();
     
 
-    const backgroundImages = ref([
-        'lake.gif',
-        'unknown_land.gif',
-        'wiggly_tuff_guild_night.gif'
-    ]);
-    
-    const currentBackground = ref('');
+
 
     //paralax effect
     const imageStyle = computed(() => {
-        const xOffset = distanceToPourcentage(x.value, width.value/2) * paralaxPower.value * -1;
-        const yOffset = distanceToPourcentage(y.value, height.value/2) * paralaxPower.value * -1;
+        const xOffset = distanceToPourcentage(x.value, width.value/2) * paralax_power.value * -1;
+        const yOffset = distanceToPourcentage(y.value, height.value/2) * paralax_power.value * -1;
         
         return {
             position: 'absolute',
-            transform: `translate(${xOffset}px, ${yOffset}px) scale(${1 + paralaxPower.value * 0.5})`,
+            transform: `translate(${xOffset}px, ${yOffset}px) scale(${1 + paralax_power.value * 0.5})`,
             width: "100vw",
             height: "100vh",
             objectFit: 'cover',
@@ -38,8 +32,8 @@
 
     
     const setRandomBackground = () => {
-        const randomIndex = getRandomInt(0, backgroundImages.value.length - 1);
-        currentBackground.value = backgroundImages.value[randomIndex];
+        const randomIndex = getRandomInt(0, bg_images.value.length - 1);
+        curr_bg_image.value = bg_images.value[randomIndex];
     };
 
     
@@ -51,7 +45,7 @@
 
 <template>
     <img class="overflow-hidden" 
-        :src="`/src/assets/Backgrounds/${currentBackground}`" 
+        :src="`/src/assets/Backgrounds/${curr_bg_image}`" 
         :style="imageStyle"
         alt="Background"
     >

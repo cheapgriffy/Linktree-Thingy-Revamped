@@ -1,7 +1,7 @@
 <script setup>
     import { ref, computed } from 'vue';
     import { useMouse, useWindowSize, onKeyStroke } from '@vueuse/core';
-    import { paralaxPower } from '../assets/js/settings';
+    import { paralax_power } from '../assets/js/settings';
     import { distanceToPourcentage } from '../assets/js/GlobalClasses';
     
 
@@ -17,10 +17,10 @@
 
 
     const paralaxpreview = computed(() => {
-        const xOffset = distanceToPourcentage(x.value, width.value/2) * paralaxPower.value;
-        const yOffset = distanceToPourcentage(y.value, height.value/2) * paralaxPower.value;
+        const xOffset = distanceToPourcentage(x.value, width.value/2) * paralax_power.value;
+        const yOffset = distanceToPourcentage(y.value, height.value/2) * paralax_power.value;
         return{
-            transform: `translate(${xOffset}px, ${yOffset}px) scale(${1 + paralaxPower.value * 0.5})`,
+            transform: `translate(${xOffset}px, ${yOffset}px) scale(${1 + paralax_power.value * 0.5})`,
             position: 'relative',
             top: "50%",
             left: "50%",
@@ -49,7 +49,7 @@
             <p class="debug-label">centerY: <strong>{{ height/2 }}</strong></p>
         </div>
 
-        <p class="debug-label">paralaxPower: <strong>{{ paralaxPower }}</strong></p>
+        <p class="debug-label">paralax_power: <strong>{{ paralax_power }}</strong></p>
     </div>
 </template>
 
@@ -57,5 +57,8 @@
 .debug-label{
     mix-blend-mode:exclusion;
     color: white
+}
+strong{
+    color: yellow;
 }
 </style>
