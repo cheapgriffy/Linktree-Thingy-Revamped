@@ -8,6 +8,7 @@ as a pretext to learn VueJS and Vite, and to have fun with it.
 - Random Background
 - Background Parallax Effect
 - Parallax Debug overlay
+- Dynamic button for links
 
 > I should really change the name
 > but the only skills that matter for now is learning
