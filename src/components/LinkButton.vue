@@ -12,8 +12,15 @@ defineProps({
         class="z-1"
         v-if="link_obj.active">
         <button  
-            class="link-btn responsive-text bg-[#1f1f1f] text-white rounded-2xl">
-            {{ link_obj.title }}
+            class="relative link-btn responsive-text bg-[#1f1f1f] text-white rounded-2xl flex justify-center items-center">
+            <img 
+                v-if="link_obj.icon_url" 
+                :src="link_obj.icon_url" 
+                class="w-10 h-10 absolute left-3"> 
+            <span 
+                class="text-center grow">
+                {{ link_obj.title }}
+            </span>
         </button>
     </a>
 </template>
@@ -21,7 +28,7 @@ defineProps({
 <style>
 .responsive-text {
     font-size: clamp(1rem, 1.5rem + 0.5vw, 1.7rem);
-    padding: 0.50rem clamp(1.5rem, 3vw, 3rem);
+    padding: 0.50rem 0.50rem;
     width: clamp(300px, 350px + 2vw, 500px);
 }
 
