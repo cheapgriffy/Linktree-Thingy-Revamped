@@ -68,6 +68,12 @@ let links_list = ref([
         icon_url: "../src/assets/icons/trello_icon.webp",
         active: true,
     },
+    {
+        title: "Mes Notes du taf",
+        link: "https://notes.cheapgriffy.fr/",
+        icon_url: "",
+        active: true,
+    },
 
 ])
 
@@ -79,9 +85,11 @@ let personal_phrases = [
     "I was too stingy to pay... and though it would be fun to make one !", 
     "There's a few of my links here, come take a look.",
     "Background is random, cause I think they all look great. ^w^",
+    "I remade this on VueJS as a pretext to train myself",
     "The font ? its 'wondermail' a PMD EoS font recreated by fans",
     "Take a look at the commissions I did in the past with the Trello link",
     "I listen to a lot of games ost, check my playlist's",
+    "All hail Express JS",
     "I will respond on both Discord or Telegram, if I'm not overwhelmed '^^",
     "I got my shy periods... so dont take my absence as a offense",
     "W-why are you taking so long on that page... I feel nervous ><",
