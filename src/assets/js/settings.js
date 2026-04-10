@@ -9,13 +9,6 @@ const curr_bg_image = ref('');
 const paralax_power = ref(0.2);
 
 
-// Default localisation ./assets/Backgrounds/
-// const bg_images = ref([
-//         'lake.gif',
-//         'unknown_land.gif',
-//         'wiggly_tuff_guild_night.gif'
-// ]);
-
 const bg_images = ref([])
 const bg_folder_import = import.meta.glob('../Backgrounds/*.gif', { eager: true, import: 'default' })
 
@@ -23,7 +16,6 @@ bg_images.value = Object.keys(bg_folder_import)                 // get all entri
                             .map(path => path.split('/')        // separate eleemnts from ``/``
                                 .pop())                         // pop destroy BUT OUTPUT last element, since its map() it only get pop return
 
-console.log(bg_folder_import)
 
 
 // ref cause is modified from debug var
@@ -92,7 +84,6 @@ let personal_phrases = [
     "I listen to a lot of games ost, check my playlist's",
     "I will respond on both Discord or Telegram, if I'm not overwhelmed '^^",
     "I got my shy periods... so dont take my absence as a offense",
-    "I swear I was forced to wear that JingleBell collar ;-;",
     "W-why are you taking so long on that page... I feel nervous ><",
 ]
 

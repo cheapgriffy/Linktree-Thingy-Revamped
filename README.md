@@ -9,6 +9,7 @@ as a pretext to learn VueJS and Vite, and to have fun with it.
 - Background Parallax Effect
 - Parallax Debug overlay
 - Dynamic button for links
+- Typewritter effect
 
 ## Architecuture
 ```
