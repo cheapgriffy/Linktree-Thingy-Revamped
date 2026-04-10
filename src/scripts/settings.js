@@ -25,7 +25,8 @@ const bg_images = ref([
 //                                 .pop())                         // pop destroy BUT OUTPUT last element, since its map() it only get pop return
 
 // ref cause is modified from debug var
-let links_list = ref([
+let links_list = ref(
+    [
     {
         title: "Discord",
         link: "https://discord.com/users/584096691473350657",
@@ -81,7 +82,8 @@ let links_list = ref([
         active: true,
     },
 
-])
+]
+)
 
 // Personal means they'll be multiple set for each cathegories
 // likes professionnal and shit

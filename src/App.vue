@@ -4,6 +4,8 @@ import debugVar from './components/debugVar.vue'
 import LinkButton from './components/LinkButton.vue'
 import TextBox from './components/TextBox.vue'
 import ProfilePicture from './components/ProfilePicture.vue'
+import ProfileNavBar from './components/ProfileNavBar.vue'
+
 
 import { links_list, personal_phrases, username } from './scripts/settings'
 
@@ -12,13 +14,14 @@ import { links_list, personal_phrases, username } from './scripts/settings'
 
 
 <template>
-	<debugVar class="absolute" />
+	<debugVar class="fixed" />
+	<ProfileNavBar class="z-1" />
 
 	<!-- main content -->
 	<section id="content" class="flex flex-col gap-5 justify-center items-center font-[Wondermail]">
 		
 		<!-- Header -->
-		<div class="my-10 flex flex-col justify-center items-center gap-5">
+		<div class="my-10 mt-30 flex flex-col justify-center items-center gap-5">
 			<ProfilePicture />
 			<TextBox :phrases="personal_phrases" :username="username" sleepTime=50 />
 		</div>
