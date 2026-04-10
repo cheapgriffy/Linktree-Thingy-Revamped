@@ -1,7 +1,7 @@
 <script setup>
     import { ref, computed } from 'vue';
     import { useMouse, useWindowSize, onKeyStroke } from '@vueuse/core';
-    import { paralax_power, links_list, curr_bg_image, bg_images } from '../assets/js/settings';
+    import { paralax_power, links_list, curr_bg_image, bg_images, username } from '../assets/js/settings';
     import { distanceToPourcentage } from '../assets/js/GlobalClasses';
     
 
@@ -81,6 +81,13 @@
             </li>
         </template>
         </ul>
+
+        <!-- Divider -->
+        <span class="bg-white/20 w-full h-0.5 block rounded-4xl my-2"></span>
+
+        <p class="debug-label">Char t'ill overflow : <strong>{{ 65 - username.length }}</strong></p>
+        <label class="debug-label" for="username">Username : </label>
+        <input class="debug-label" type="text" v-model="username" >
 
     </div>
 </template>

@@ -1,19 +1,21 @@
-//! Useful for script setup scenario, to be edited later too
+//!----------------------------------------------------------!//
+//! Useful for script setup scenario, to be edited later too !//
+//!----------------------------------------------------------!//
 
 import { ref } from 'vue';
 
 
-//? Background Related
-const paralax_power = ref(0.2);
 const curr_bg_image = ref('');
+const paralax_power = ref(0.2);
 
+// Default localisation ./assets/Backgrounds/
 const bg_images = ref([
         'lake.gif',
         'unknown_land.gif',
         'wiggly_tuff_guild_night.gif'
 ]);
 
-//? Link Rendering list 
+
 // ref cause is modified from debug var
 let links_list = ref([
     {
@@ -67,9 +69,33 @@ let links_list = ref([
 
 ])
 
+// Personal means they'll be multiple set for each cathegories
+// likes professionnal and shit
+// ~= 65 - usernam.lenght chars pers phrasess  to prevent overflow
+let personal_phrases = [
+    "Hello there ! welcome to my linktree clone :D", 
+    "I was too stingy to pay... and though it would be fun to make one !", 
+    "There's a few of my links here, come take a look.",
+    "Background is random, cause I think they all look great. ^w^",
+    "The font ? its 'wondermail' a PMD EoS font recreated by fans",
+    "Take a look at the commissions I did in the past with the Trello link",
+    "I listen to a lot of games ost, check my playlist's",
+    "I will respond on both Discord or Telegram, if I'm not overwhelmed '^^",
+    "I got my shy periods... so dont take my absence as a offense",
+    "I swear I was forced to wear that JingleBell collar ;-;",
+    "W-why are you taking so long on that page... I feel nervous ><",
+]
+
+// used as flag in textBox component
+const username = ref("")
+// Sets manually cause setting it in ref would make not reactive with debugVar
+username.value = "CheapGriffy"
+
 export {
     paralax_power,
     curr_bg_image,
     bg_images,
-    links_list
+    links_list,
+    personal_phrases,
+    username,
 }    
