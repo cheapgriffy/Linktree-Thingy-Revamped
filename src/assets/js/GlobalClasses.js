@@ -17,8 +17,11 @@ const distanceToPourcentage = (a, b) => {
 	return result
 }
 
+const sleep = (ms) => 
+    new Promise(resolve => setTimeout(resolve, ms));
 
 export {
     getRandomInt,
     distanceToPourcentage,
+    sleep,
 };

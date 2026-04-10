@@ -8,12 +8,22 @@ import { ref } from 'vue';
 const curr_bg_image = ref('');
 const paralax_power = ref(0.2);
 
+
 // Default localisation ./assets/Backgrounds/
-const bg_images = ref([
-        'lake.gif',
-        'unknown_land.gif',
-        'wiggly_tuff_guild_night.gif'
-]);
+// const bg_images = ref([
+//         'lake.gif',
+//         'unknown_land.gif',
+//         'wiggly_tuff_guild_night.gif'
+// ]);
+
+const bg_images = ref([])
+const bg_folder_import = import.meta.glob('../Backgrounds/*.gif', { eager: true, import: 'default' })
+
+bg_images.value = Object.keys(bg_folder_import)                 // get all entries
+                            .map(path => path.split('/')        // separate eleemnts from ``/``
+                                .pop())                         // pop destroy BUT OUTPUT last element, since its map() it only get pop return
+
+console.log(bg_folder_import)
 
 
 // ref cause is modified from debug var

@@ -15,7 +15,7 @@ import { links_list, personal_phrases, username } from './assets/js/settings'
 
 	<!-- main content -->
 	<section id="content" class="flex flex-col gap-5 justify-center items-center w-screen h-screen font-[Wondermail]">
-		<div>
+		<div class="mb-10">
 			<TextBox :phrases="personal_phrases" :username="username" sleepTime="50" />
 		</div>
 

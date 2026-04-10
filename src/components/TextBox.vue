@@ -1,5 +1,6 @@
 <script setup>
 import { ref, onMounted } from 'vue';
+import { sleep } from '../assets/js/GlobalClasses';
 
 const props = defineProps({
     phrases: Array,
@@ -13,9 +14,6 @@ const props = defineProps({
     },
 })
 
-
-const sleep = (ms) => 
-    new Promise(resolve => setTimeout(resolve, ms));
 
 const displayedText = ref('')
 

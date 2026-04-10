@@ -10,5 +10,25 @@ as a pretext to learn VueJS and Vite, and to have fun with it.
 - Parallax Debug overlay
 - Dynamic button for links
 
+## Architecuture
+```
+/src
+├── assets                          // Prefer .webp for media's
+│   ├── backgrounds
+│   ├── fonts
+│   ├── icons
+│   ├── images
+│   └── js
+│       ├── GlobalClasses.js        // Contain all often reused functions *ex sleep()*
+│       └── settings.js             // Contain global settings, mostly refs and raw data for now
+├── components
+│   ├── Background.vue              // Paralax is locally implemented on backgorund
+│   ├── LinkButton.vue              // Socials buttons
+│   └── debugVar.vue                // Shown on K keypress, various variables and edit inputs
+├── App.vue
+├── main.js
+└── vite.config.js                  // No changes, default port used for now
+```
+
 > I should really change the name
 > but the only skills that matter for now is learning
