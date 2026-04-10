@@ -10,6 +10,9 @@ as a pretext to learn VueJS and Vite, and to have fun with it.
 - Parallax Debug overlay
 - Dynamic button for links
 - Typewritter effect
+- Discord Profile Picture link
+
+---
 
 ## Architecuture
 ```
@@ -30,6 +33,12 @@ as a pretext to learn VueJS and Vite, and to have fun with it.
 ├── main.js
 └── vite.config.js                  // No changes, default port used for now
 ```
+
+## API Used
+
+- [PFP-API](https://github.com/AdvanceFTeam/PFP-API) from [AdvanceFallingTeam](https://github.com/AdvanceFTeam)
+Used for Discord profile picture download.
+
 
 > I should really change the name
 > but the only skills that matter for now is learning
