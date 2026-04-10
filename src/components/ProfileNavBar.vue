@@ -18,7 +18,7 @@ const disapear_onscroll = computed(() => {
 
 <template>
     <div :style="disapear_onscroll" class="fixed-x-center bg-[#424242] border-2 border-[#1f1f1f46] rounded-full w-100 h-15">
-        <p class="text-white">{{ arrivedState.top }}</p>
+        
     </div>
 </template>
 
