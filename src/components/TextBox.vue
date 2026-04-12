@@ -68,11 +68,12 @@ onMounted(() => {
 
 <style>
 .textbox{
+    image-rendering: pixelated;
     background-image: url(../assets/images/PmdTextbox.webp);
     background-size: cover;
 
     /* initial size */
-    width: calc(241px * 1.5);
-    height: calc(53px * 1.5);
+    width: calc(241px * 1.6);
+    height: calc(53px * 1.6);
 }
 </style>
