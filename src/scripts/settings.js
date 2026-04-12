@@ -8,64 +8,70 @@ import { ref } from 'vue';
 const curr_bg_image = ref('');
 const paralax_power = ref(0.2);
 
+// Hardcoded bg_images, need to edit on each bg add. check why below
+const bg_images = ref([
+    "lake.gif",
+    "unknown_land.gif",
+    "wiggly_tuff_guild_night.gif"
+])
 
-const bg_images = ref([])
-const bg_folder_import = import.meta.glob('../Backgrounds/*.gif', { eager: true, import: 'default' })
+//? cant import and filter data from /public in js,
+//? It work in vite, but not when builded, 
+// double ../ cause its higher than src
+// const bg_folder_import = import.meta.glob('../../public/assets/Backgrounds/*.gif', { eager: true, import: 'default' })
 
-bg_images.value = Object.keys(bg_folder_import)                 // get all entries
-                            .map(path => path.split('/')        // separate eleemnts from ``/``
-                                .pop())                         // pop destroy BUT OUTPUT last element, since its map() it only get pop return
-
-
+// bg_images.value = Object.keys(bg_folder_import)                 // get all entries
+//                             .map(path => path.split('/')        // separate eleemnts from ``/``
+//                                 .pop())                         // pop destroy BUT OUTPUT last element, since its map() it only get pop return
 
 // ref cause is modified from debug var
 let links_list = ref([
     {
         title: "Discord",
         link: "https://discord.com/users/584096691473350657",
-        icon_url: "../src/assets/icons/discord_icon.png",
+        icon_url: "/assets/icons/discord_icon.png",
         active: true,
     },
     {
         title: "Telegram",
         link: "https://t.me/CheapGriffy",
-        icon_url: "../src/assets/icons/telegram.webp",
+        icon_url: "/assets/icons/telegram.webp",
         active: true,
     },
     {
         title: "Reddit",
         link: "https://www.reddit.com/user/CheapGriffy/",
-        icon_url: "../src/assets/icons/reddit_pixel.webp",
+        icon_url: "/assets/icons/reddit_pixel.webp",
         active: true,
     },
     {
         title: "BlueSky",
         link: "https://bsky.app/profile/cheapgriffy.bsky.social",
-        icon_url: "../src/assets/icons/bluesky_pixel.webp",
+        icon_url: "/assets/icons/bluesky_pixel.webp",
         active: true,
     },
     {
         title: "Youtube Music",
         link: "https://music.youtube.com/channel/UCNxqu6tEm7lf2r0kP64d1XQ?si=4uCwc1cifToxMWfx",
-        icon_url: "../src/assets/icons/yt_music.webp",
+        icon_url: "/assets/icons/yt_music.webp",
         active: true,
     },
     {
         title: "Steam",
         link: "https://steamcommunity.com/profiles/76561198254767370/",
-        icon_url: "../src/assets/icons/STEAMICON.webp",
+        icon_url: "/assets/icons/STEAMICON.webp",
         active: true,
     },
     {
         title: "Github",
         link: "https://github.com/cheapgriffy",
-        icon_url: "../src/assets/icons/github.webp",
+        icon_url: "/assets/icons/github.webp",
         active: true,
     },
     {
         title: "Drawing Trello",
         link: "https://trello.com/b/Hoz3wRbT/griffys-drawing",
-        icon_url: "../src/assets/icons/trello_icon.webp",
+        icon_url: "/assets/icons/trello_icon.webp",
         active: true,
     },
     {

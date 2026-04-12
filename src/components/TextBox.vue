@@ -1,6 +1,6 @@
 <script setup>
 import { ref, onMounted } from 'vue';
-import { sleep } from '../assets/js/GlobalClasses';
+import { sleep } from '../scripts/GlobalClasses';
 
 const props = defineProps({
     phrases: Array,

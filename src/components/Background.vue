@@ -1,8 +1,8 @@
 <script setup>
     import { ref, computed, onMounted } from 'vue';
-    import { getRandomInt, distanceToPourcentage } from '../assets/js/GlobalClasses';
+    import { getRandomInt, distanceToPourcentage } from '../scripts/GlobalClasses';
     import { useMouse, useWindowSize } from '@vueuse/core';
-    import { paralax_power, curr_bg_image, bg_images } from '../assets/js/settings';
+    import { paralax_power, curr_bg_image, bg_images } from '../scripts/settings';
 
     const { x, y, sourceType } = useMouse();
     const { width, height } = useWindowSize();
@@ -43,7 +43,7 @@
 
 <template>
     <img  
-        :src="`/src/assets/Backgrounds/${curr_bg_image}`" 
+        :src="`/assets/Backgrounds/${curr_bg_image}`" 
         :style="imageStyle"
         alt="Background"
     >

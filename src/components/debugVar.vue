@@ -1,15 +1,15 @@
 <script setup>
     import { ref, computed } from 'vue';
     import { useMouse, useWindowSize, onKeyStroke } from '@vueuse/core';
-    import { paralax_power, links_list, curr_bg_image, bg_images, username } from '../assets/js/settings';
-    import { distanceToPourcentage } from '../assets/js/GlobalClasses';
+    import { paralax_power, links_list, curr_bg_image, bg_images, username } from '../scripts/settings';
+    import { distanceToPourcentage } from '../scripts/GlobalClasses';
     
 
     const { x, y } = useMouse();
     const { width, height } = useWindowSize();
 
     // to know, this.value is not needed, ref.value is only in script
-    const is_debug_mode = ref(true);
+    const is_debug_mode = ref(false);
 
     onKeyStroke("k", (e) => {
         is_debug_mode.value = !is_debug_mode.value;

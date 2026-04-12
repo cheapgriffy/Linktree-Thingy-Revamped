@@ -5,7 +5,7 @@ import LinkButton from './components/LinkButton.vue'
 import TextBox from './components/TextBox.vue'
 import ProfilePicture from './components/ProfilePicture.vue'
 
-import { links_list, personal_phrases, username } from './assets/js/settings'
+import { links_list, personal_phrases, username } from './scripts/settings'
 
 
 </script>
@@ -39,7 +39,7 @@ import { links_list, personal_phrases, username } from './assets/js/settings'
 <style>
 @font-face {
 	font-family: "WonderMail";
-	src: url("./assets/fonts/wondermail.ttf") format("truetype");
+	src: url("/assets/fonts/wondermail.ttf") format("truetype");
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
