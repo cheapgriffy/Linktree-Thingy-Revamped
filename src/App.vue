@@ -12,7 +12,7 @@ import { links_list, personal_phrases, username } from './scripts/settings'
 
 
 <template>
-	<debugVar class="absolute" />
+	<debugVar class="fixed" />
 
 	<!-- main content -->
 	<section id="content" class="flex flex-col gap-5 justify-center items-center font-[Wondermail]">
