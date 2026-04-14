@@ -1,7 +1,7 @@
 # Linktree Thingy Revamped 🌈
 
 A remastered version of my old project, [Linktree Thingy](https://github.com/cheapgriffy/Linktree-thingy), built in VueJS with javascript and vite.
-as a pretext to learn VueJS and Vite, and to have fun with it.
+as a pretext to learn VueJS and Vite, and to have fun with it.<br>
 *especially the fun part*
 
 ## Features
