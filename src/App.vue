@@ -6,7 +6,6 @@ import TextBox from './components/TextBox.vue'
 import ProfilePicture from './components/ProfilePicture.vue'
 import ProfileNavBar from './components/ProfileNavBar.vue'
 
-
 import { links_list, personal_phrases, username, curr_profile_name } from './scripts/settings'
 
 
