@@ -7,7 +7,7 @@ import ProfilePicture from './components/ProfilePicture.vue'
 import ProfileNavBar from './components/ProfileNavBar.vue'
 
 
-import { links_list, personal_phrases, username } from './scripts/settings'
+import { links_list, personal_phrases, username, curr_profile_name } from './scripts/settings'
 
 
 </script>
@@ -23,7 +23,8 @@ import { links_list, personal_phrases, username } from './scripts/settings'
 		<!-- Header -->
 		<div class="my-10 mt-30 flex flex-col justify-center items-center gap-5">
 			<ProfilePicture />
-			<TextBox :phrases="personal_phrases" :username="username" sleepTime=50 />
+			<!-- if key value change, it rerender -->
+			<TextBox :key="curr_profile_name" :phrases="personal_phrases" :username="username" sleepTime=50 />
 		</div>
 
 		<!-- LInks -->

@@ -6,9 +6,10 @@ const getRandomInt = (min, max) => {
 }
 
 /**
+ * Calculate distance betweeen two numbers in %
  * @param {nomre 1} a 
  * @param {nombre 2} b 
- * @returns la distance en pourcentage entre les deux nombre
+ * @returns % between two numbers
 */
 const distanceToPourcentage = (a, b) => {
 	let result = a - b
@@ -17,11 +18,30 @@ const distanceToPourcentage = (a, b) => {
 	return result
 }
 
+/**
+ * used with await to stop or delay execution
+ * @param {number} ms milisecond of promised wait
+ * @returns promise waiting ms second
+ */
 const sleep = (ms) => 
     new Promise(resolve => setTimeout(resolve, ms));
+
+
+/**
+ * "example" into "Example"
+ * @param {string} string, phrase to capitalize
+ * @returns string with Maj at the end
+ */
+const capitalize = (string) => 
+    string.charAt(0).toUpperCase() + string.slice(1);
+
+
 
 export {
     getRandomInt,
     distanceToPourcentage,
     sleep,
+    capitalize,
 };
+
+

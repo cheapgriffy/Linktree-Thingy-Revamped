@@ -2,10 +2,13 @@
     import { ref, computed, onMounted } from 'vue';
     import { getRandomInt, distanceToPourcentage } from '../scripts/GlobalClasses';
     import { useMouse, useWindowSize } from '@vueuse/core';
-    import { paralax_power, curr_bg_image, bg_images } from '../scripts/settings';
+    import { paralax_power, curr_bg_image, bg_images, isNavHovered } from '../scripts/settings';
 
     const { x, y, sourceType } = useMouse();
     const { width, height } = useWindowSize();
+
+    //TODO make blur reactive to navBarHOver thingy
+    const bg_blur = ref(5)
     
     // paralax works
     // send reactively css variables to background
@@ -24,7 +27,7 @@
             top: "0%",
             left: "0%",
             pointerEvents: 'none',
-            filter: 'blur(5px)',
+            filter: `blur(${bg_blur.value}px)`,
         };
     });
 

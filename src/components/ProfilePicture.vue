@@ -21,8 +21,8 @@ watch(data, (newBlob) => {
 
 <template>
     
-    <span class="w-35 h-35  border shadow-lg rounded-3xl flex items-center justify-center text-center transform -rotate-45 mb-4 overflow-clip hover:rounded-[100%] transition-all duration-400 hover:scale-110">
-        <img class="rotate-45 scale-180 hover:scale-140 transition-all duration-400"
+    <span class="w-35 h-35 apply-bezier-anim border shadow-lg rounded-3xl flex items-center justify-center text-center transform -rotate-45 mb-4 overflow-clip hover:rounded-[100%] hover:scale-110">
+        <img class="apply-bezier-anim rotate-45 scale-180 hover:scale-140"
             :src="displaySrc"
             alt="">
     </span>

@@ -1,7 +1,7 @@
 <script setup>
     import { ref, computed } from 'vue';
     import { useMouse, useWindowSize, onKeyStroke } from '@vueuse/core';
-    import { paralax_power, links_list, curr_bg_image, bg_images, username } from '../scripts/settings';
+    import { paralax_power, links_list, curr_bg_image, bg_images, username, isNavHovered } from '../scripts/settings';
     import { distanceToPourcentage } from '../scripts/GlobalClasses';
     
 
@@ -89,6 +89,10 @@
         <label class="debug-label" for="username">Username : </label>
         <input class="debug-label" type="text" v-model="username" >
 
+        <!-- Divider -->
+        <span class="bg-white/20 w-full h-0.5 block rounded-4xl my-2"></span>
+
+        <p class="debug-label">isNavHovered : {{ isNavHovered }}</p>
     </div>
 </template>
 
