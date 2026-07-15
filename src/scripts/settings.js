@@ -78,7 +78,7 @@ let links_list = ref([
         title: "Mes Notes du taf",
         link: "https://notes.cheapgriffy.fr/",
         icon_url: "",
-        active: true,
+        active: false,
     },
 
 ])
