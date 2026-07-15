@@ -39,15 +39,15 @@ let links_list = ref([
         active: true,
     },
     {
-        title: "Reddit",
-        link: "https://www.reddit.com/user/CheapGriffy/",
-        icon_url: "/assets/icons/reddit_pixel.webp",
-        active: true,
-    },
-    {
         title: "BlueSky",
         link: "https://bsky.app/profile/cheapgriffy.bsky.social",
         icon_url: "/assets/icons/bluesky_pixel.webp",
+        active: true,
+    },
+    {
+        title: "Reddit",
+        link: "https://www.reddit.com/user/CheapGriffy/",
+        icon_url: "/assets/icons/reddit_pixel.webp",
         active: true,
     },
     {
