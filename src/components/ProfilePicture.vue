@@ -1,30 +1,45 @@
 <script setup>
 import { ref, watch } from 'vue'
 import { useFetch } from '@vueuse/core'
+import { getDiscordCDNLink } from '../scripts/GlobalClasses.js'
 
-// using https://github.com/AdvanceFTeam/PFP-API api
-// getting raw image
-const { isFetching, error, data } = useFetch('https://avatar-cyan.vercel.app/api/pfp/584096691473350657/image?size=1024&format=webp').blob()
-
-// blob url container
+const userId = '584096691473350657'
 const displaySrc = ref('')
 
-// based on output, create a fake url to be fowarded to tag
-watch(data, (newBlob) => {
-  if (newBlob) {
-    displaySrc.value = URL.createObjectURL(newBlob)
-  }
+const { data, isFinished, error } = useFetch(`https://api.lanyard.rest/v1/users/${userId}`, {
+  method: 'GET',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  afterFetch: async (ctx) => {
+    const rawBody = await ctx.response.text()
+    ctx.data = rawBody
+    return ctx
+  },
 })
 
+watch(data, (rawBody) => {
+  if (!rawBody) return
+
+  try {
+    const parsedBody = JSON.parse(rawBody)
+    const avatarHash = parsedBody?.data?.discord_user?.avatar
+    const avatarUserId = parsedBody?.data?.discord_user?.id || userId
+
+    displaySrc.value = getDiscordCDNLink(avatarUserId, avatarHash)
+  } catch (caughtError) {
+    console.error('Failed to parse Lanyard response:', caughtError)
+  }
+}, { immediate: true })
 </script>
 
 
 <template>
     
     <span class="w-35 h-35  border shadow-lg rounded-3xl flex items-center justify-center text-center transform -rotate-45 mb-4 overflow-clip hover:rounded-[100%] transition-all duration-400 hover:scale-110">
-        <img class="rotate-45 scale-180 hover:scale-140 transition-all duration-400"
+        <img class="rotate-45 scale-140 hover:scale-110 transition-all duration-400"
             :src="displaySrc"
-            alt="">
+            alt="Profile Picture">
     </span>
     
 </template>

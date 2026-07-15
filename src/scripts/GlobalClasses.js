@@ -17,11 +17,19 @@ const distanceToPourcentage = (a, b) => {
 	return result
 }
 
-const sleep = (ms) => 
-    new Promise(resolve => setTimeout(resolve, ms));
+const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
+const getDiscordCDNLink = (userId, avatarHash, size = 512) => {
+    if (!avatarHash) {
+        // default discord pfp's
+        return `https://cdn.discordapp.com/embed/avatars/${userId % 5}.png`;
+    }
+    return `https://cdn.discordapp.com/avatars/${userId}/${avatarHash}`;
+}
 
 export {
     getRandomInt,
     distanceToPourcentage,
     sleep,
+    getDiscordCDNLink
 };
