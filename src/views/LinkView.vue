@@ -9,17 +9,16 @@ import { links_list, personal_phrases, username } from '../scripts/settings'
 </script>
 
 <template>
+    <div class="flex flex-col justify-center items-center gap-5">
+        <!-- Header -->
+        <div class="my-10 flex flex-col justify-center items-center gap-5">
+            <ProfilePicture />
+            <TextBox :phrases="personal_phrases" :username="username" sleepTime=50 />
+        </div>
 
-    <!-- Header -->
-    <div class="my-10 flex flex-col justify-center items-center gap-5">
-        <ProfilePicture />
-        <TextBox :phrases="personal_phrases" :username="username" sleepTime=50 />
+        <!-- Links -->
+        <template v-for="(item, index) in links_list" :key="item.title">
+            <LinkButton :link_obj="links_list[index]" />
+        </template>
     </div>
-
-    <!-- LInks -->
-    <template v-for="(item, index) in links_list" :key="item.title">
-        <LinkButton :link_obj="links_list[index]" />
-    </template>
-
 </template>
-
