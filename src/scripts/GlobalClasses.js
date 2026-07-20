@@ -44,7 +44,6 @@ const getProfilePicture = async (userId) => {
             return ctx
         },
     })
-
     watch(data, (rawBody) => {
         if (!rawBody) return
 
@@ -60,6 +59,7 @@ const getProfilePicture = async (userId) => {
             console.error('Failed to parse Lanyard response:', caughtError)
         }
     }, { immediate: true })
+
 
 }
 

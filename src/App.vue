@@ -8,8 +8,7 @@ import UniversalNav from './components/UniversalNavBar.vue'
 import { getProfilePicture } from './scripts/GlobalClasses.js'
 import { discord_userid, discord_pfp_link } from './scripts/settings.js'
 
-
-console.log(discord_userid)
+// GET profile picture with lanyard
 getProfilePicture(discord_userid)
 
 </script>
