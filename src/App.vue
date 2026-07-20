@@ -1,11 +1,7 @@
 <script setup>
 import Background from './components/Background.vue'
 import debugVar from './components/debugVar.vue'
-import LinkButton from './components/LinkButton.vue'
-import TextBox from './components/TextBox.vue'
-import ProfilePicture from './components/ProfilePicture.vue'
 
-import { links_list, personal_phrases, username } from './scripts/settings'
 
 
 </script>
@@ -14,19 +10,12 @@ import { links_list, personal_phrases, username } from './scripts/settings'
 <template>
 	<debugVar class="fixed" />
 
+
 	<!-- main content -->
 	<section id="content" class="flex flex-col gap-5 justify-center items-center font-[Wondermail]">
-		
-		<!-- Header -->
-		<div class="my-10 flex flex-col justify-center items-center gap-5">
-			<ProfilePicture />
-			<TextBox :phrases="personal_phrases" :username="username" sleepTime=50 />
-		</div>
+	
+		<router-view />		
 
-		<!-- LInks -->
-		<template v-for="(item, index) in links_list" :key="item.title">
-			<LinkButton :link_obj="links_list[index]" />
-		</template>
 	</section>
 
 	<!-- paralaxed background -->
