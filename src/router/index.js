@@ -4,12 +4,14 @@ const routes= [
     {
         path: '/',
         name: 'home',
-        component: () => import('../views/HomeView.vue')
+        component: () => import('../views/HomeView.vue'),
+        meta: { showUniversalNav: false }
     },
     {
         path: '/links',
         name: 'links',
-        component: () => import('../views/LinkView.vue')
+        component: () => import('../views/LinkView.vue'),
+        meta: { showUniversalNav: true }
     },
 ]
 

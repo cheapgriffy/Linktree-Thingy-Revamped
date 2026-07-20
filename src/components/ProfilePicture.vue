@@ -1,8 +1,8 @@
 <script setup>
-import { ref, watch } from 'vue'
-import { discord_pfp_link } from '../scripts/settings'
-
-
+    import { ref, watch } from 'vue'
+    import { discord_pfp_link } from '../scripts/settings'
+    
+    
 </script>
 
 

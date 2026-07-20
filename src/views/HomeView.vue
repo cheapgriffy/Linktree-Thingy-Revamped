@@ -16,3 +16,6 @@ import ProfilePicture from '../components/ProfilePicture.vue'
         </header>
     </div>
 </template>
+
+
+<!-- font-['Fuzzy_Bubbles'] -->

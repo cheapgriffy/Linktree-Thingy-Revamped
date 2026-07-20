@@ -13,18 +13,19 @@ getProfilePicture(discord_userid)
 
 
 <template>
-	<debugVar class="fixed" />
+	<debugVar class="fixed z-20" />
 
-	<nav class="z-10 fixed">
-		<router-link to="/"
-			class="text-2xl font-[Wondermail] text-white hover:text-[#00ff00] transition-all duration-300">Home</router-link>
-		<router-link to="/links"
-			class="text-2xl font-[Wondermail] text-white hover:text-[#00ff00] transition-all duration-300">Links</router-link>
-	</nav>
+		<nav v-if="$route.meta.showUniversalNav" 
+			class="z-20 h-10 bg-red-500/30 gap-5 flex justify-center items-center text-2xl font-[Wondermail]">
+			<router-link to="/"
+				class="text-white hover:text-yellow-400 transition-all duration-200 ">Home</router-link>
+			<router-link to="/links"
+				class="text-white hover:text-yellow-400 transition-all duration-200">Links</router-link>
+		</nav>
 
 	<!-- main content -->
-	<section id="content" class="flex flex-col gap-5 justify-center items-center font-[Wondermail]">
-
+	<section id="content" class="flex flex-col gap-5 justify-center items-center font-[Wondermail] transition-all duration-200">
+		
 		<router-view v-slot="{ Component }">
 			<transition name="fade" mode="out-in">
 				<component :is="Component" :key="$route.path" />
@@ -49,9 +50,6 @@ getProfilePicture(discord_userid)
 	font-display: swap;
 }
 
-#id {
-	font-family: "WonderMail";
-}
 
 .fade-enter-active,
 .fade-leave-active {
