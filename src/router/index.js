@@ -4,8 +4,13 @@ const routes= [
     {
         path: '/',
         name: 'home',
+        component: () => import('../views/HomeView.vue')
+    },
+    {
+        path: '/links',
+        name: 'links',
         component: () => import('../views/LinkView.vue')
-    }
+    },
 ]
 
 const router = createRouter({

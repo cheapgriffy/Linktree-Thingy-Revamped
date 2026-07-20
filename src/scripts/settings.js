@@ -106,7 +106,10 @@ const username = ref("")
 // Sets manually cause setting it in ref would make not reactive with debugVar
 username.value = "CheapGriffy"
 
-const discord_userid = 584096691473350657
+// placeholder for global lanyard api link
+const discord_pfp_link = ref("")
+
+const discord_userid = "584096691473350657"
 
 export {
     paralax_power,
@@ -115,5 +118,6 @@ export {
     links_list,
     personal_phrases,
     username,
-    discord_userid
+    discord_userid,
+    discord_pfp_link,
 }    
