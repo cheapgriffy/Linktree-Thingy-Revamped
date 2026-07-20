@@ -9,7 +9,7 @@ import { links_list, personal_phrases, username } from '../scripts/settings'
 </script>
 
 <template class="transition-all">
-    <div class="flex flex-col justify-center items-center gap-5">
+    <div class="flex flex-col justify-center items-center gap-5 pt-6">
         <!-- Header -->
         <div class="my-10 flex flex-col justify-center items-center gap-5">
             <ProfilePicture />
