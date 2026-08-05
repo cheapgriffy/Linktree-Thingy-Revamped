@@ -7,6 +7,11 @@ const routes= [
         component: () => import('../views/HomeView.vue'),
     },
     {
+        path: '/commission',
+        name: 'commission',
+        component: () => import('../views/CommissionView.vue'),
+    },
+    {
         path: '/links',
         name: 'links',
         component: () => import('../views/LinkView.vue'),

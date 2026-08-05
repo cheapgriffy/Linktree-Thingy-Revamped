@@ -1,18 +1,16 @@
 <script setup>
 
-import ProfilePicture from '../components/ProfilePicture.vue'
-
 </script>
 
 <template>
-    <div class="flex h-100 w-full">
-        <div class="w-[50%] h-full bg-red-600"></div>
-        <div class="w-[50%] h-full bg-blue-600"></div>
+    <div class="w-full h-100 border-b-4xl flex justify-center">
+        <img src="/assets/images/CheapGriffy.png" class="w-auto h-40" alt="CheapGriffy Handrwitten">
     </div>
-    <footer class="bg-[#2b2223] w-full h-30 rounded-b-4xl">
-        <p>Test content test</p>
-    </footer>
 </template>
+
+<style>
+
+</style>
 
 
 <!-- font-['Fuzzy_Bubbles'] -->
