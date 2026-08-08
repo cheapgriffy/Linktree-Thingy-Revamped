@@ -29,9 +29,9 @@ getProfilePicture(discord_userid)
 		<LinkView v-if="$route.path === '/links'" />
 
 		<!-- Card section -->
-		<section v-else class="bg-[#af6f54] rounded-4xl min-w-250 min-h-150">
+		<section v-else class="card-background rounded-4xl min-w-[70%] min-h-200 border-[#4E4E4E] paperlike">
 
-			<nav id="card-navbar" class="bg-[#4d281d] w-full h-23 half-rounded flex justify-center items-center gap-5 text-[#ffe894] text-2xl font-['Fuzzy_Bubbles']">
+			<nav id="card-navbar" class="bg-[#4d281d] w-full h-23 rounded-t-[1.65rem] flex justify-center items-center gap-5 text-[#ffe894] text-2xl font-['Fuzzy_Bubbles']">
 				<router-link to="/" class=" p-2 px-5 rounded-full border-[rgb(0,0,0,0)] border-2 hover:border-[#ffe894] transition-all">Home</router-link>
 				<router-link to="/commission" class=" p-2 px-5 rounded-full border-[rgb(0,0,0,0)] border-2 hover:border-[#ffe894] transition-all">Commission</router-link>
 				<router-link to="/links" class=" p-2 px-5 rounded-full border-[rgb(0,0,0,0)] border-2 hover:border-[#ffe894] transition-all">Links</router-link>
@@ -79,7 +79,24 @@ getProfilePicture(discord_userid)
 	opacity: 1;
 }
 
-.half-rounded{
-	border-radius: 1.90rem 1.90rem 0% 0%;
+.paperlike{
+	border: 0.4rem solid #4E4E4E;
+	box-shadow: 0 0 0 0.4rem rgba(255, 255, 255, 1);
 }
+
+.card-background{
+	background-color: #a76a50;
+	background-image: url('/assets/motif/grid.png');
+
+	animation: backgroundIdle 2s linear infinite;
+}
+@keyframes backgroundIdle{
+	0%{
+		background-position: 0 0;
+	}
+	100%{
+		background-position: 60px 60px;
+	}
+}
+
 </style>

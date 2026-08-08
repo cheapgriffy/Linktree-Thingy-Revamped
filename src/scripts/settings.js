@@ -10,7 +10,7 @@ const paralax_power = ref(0.2);
 
 // Hardcoded bg_images, need to edit on each bg add. check why below
 const bg_images = ref([
-    "lake.gif",
+    "Fogbound_Lake.gif",
     "unknown_land.gif",
     "wiggly_tuff_guild_night.gif"
 ])
