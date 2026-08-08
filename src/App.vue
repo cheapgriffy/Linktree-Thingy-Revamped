@@ -37,6 +37,7 @@ getProfilePicture(discord_userid)
 				<router-link to="/links" class=" p-2 px-5 rounded-full border-[rgb(0,0,0,0)] border-2 hover:border-[#ffe894] transition-all">Links</router-link>
 			</nav>
 
+
 			<router-view v-slot="{ Component }">
 				<transition name="fade" mode="out-in">
 					<component :is="Component" :key="$route.path" />
