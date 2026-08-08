@@ -6,8 +6,6 @@ import LinkView from './views/LinkView.vue'
 import ProfilePicture from './components/ProfilePicture.vue'
 import Footer from './components/Footer.vue'
 
-
-
 import { getProfilePicture } from './scripts/GlobalClasses.js'
 import { discord_userid, discord_pfp_link } from './scripts/settings.js'
 
@@ -30,14 +28,17 @@ getProfilePicture(discord_userid)
 		<LinkView v-if="$route.path === '/links'" />
 
 		<!-- Card section -->
-		<section v-else class="flex flex-col justify-between card-background rounded-4xl min-w-[70%] min-h-180 border-[#4E4E4E] paperlike">
+		<section v-else class="flex flex-col justify-between card-background rounded-4xl min-w-[80%] max-w-200 min-h-180 border-[#4E4E4E] paperlike shadow-2xl
+								max-[800px]:w-[99%] max-[800px]:h-[99%]">
 
-			<nav id="card-navbar" class="bg-[#4d281d] w-full h-23 rounded-t-[1.65rem] flex justify-center items-center gap-5 text-[#ffe894] text-2xl font-['Fuzzy_Bubbles']">
+			<!-- TODO make a hamburger menu -->
+			<!-- TODO Or swipe left / right to cycle routes -->
+			<nav id="card-navbar" class="bg-[#4d281d] w-full h-23 rounded-t-[1.65rem] flex justify-center items-center gap-5 text-[#ffe894] text-2xl font-['Fuzzy_Bubbles']
+										max-[800px]:hidden">
 				<router-link to="/" class=" p-2 px-5 rounded-full border-[rgb(0,0,0,0)] border-2 hover:border-[#ffe894] transition-all">Home</router-link>
 				<router-link to="/commission" class=" p-2 px-5 rounded-full border-[rgb(0,0,0,0)] border-2 hover:border-[#ffe894] transition-all">Commission</router-link>
 				<router-link to="/links" class=" p-2 px-5 rounded-full border-[rgb(0,0,0,0)] border-2 hover:border-[#ffe894] transition-all">Links</router-link>
 			</nav>
-
 
 			<router-view v-slot="{ Component }">
 				<transition name="fade" mode="out-in">
@@ -100,6 +101,16 @@ getProfilePicture(discord_userid)
 	100%{
 		background-position: 60px 60px;
 	}
+}
+
+.view-wrapper {
+  transition: height 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+@media (max-width: 800px) {
+/* max-[800px]: */
 }
 
 </style>

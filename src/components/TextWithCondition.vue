@@ -1,13 +1,14 @@
 <script setup>
 
 const props = defineProps({
-    content: {
-        type: String,
-        default: "Text without content",
-    },
     correct: {
         type: Boolean,
         default: true,
+    },
+    content: {
+        type: String,
+        default: "God take away wifes and dogs, but sometimes, just sometime I do",
+        // this time i wont forget one without content
     }
 })
 
