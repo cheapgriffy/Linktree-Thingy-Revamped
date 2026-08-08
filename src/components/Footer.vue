@@ -18,8 +18,8 @@ import { curr_bg_image, } from '../scripts/settings.js'
             <span class="flex gap-2"><strong>Art Trades : </strong> <textWithCondition :content="'Yeees'" :correct="true" /></span>
         </div>
         <div class="h-full w-[33%]">
-            <p class="hover:text-[#ffff00] transition-colors ">Current Background : 
-                <a :href="'/public/assets/Backgrounds/' +curr_bg_image" target="_blank">
+            <p>Current Background : 
+                <a class="hover:text-[#ffff00] transition-colors " :href="'/public/assets/Backgrounds/' +curr_bg_image" target="_blank">
                     {{ curr_bg_image }}
                 </a>
             </p>

@@ -1,13 +1,12 @@
 <script setup>
 
 import WavingGriffy from '../components/WavingGriffy.vue'
-import Footer from '../components/Footer.vue'
 
 </script>
 
 <template>
     <section>
-        <section class="w-full h-150 flex justify-center gap-15 p-5">
+        <section class="w-full flex justify-center gap-15 p-5">
             <div class="w-auto flex items-center flex-col text-center font-[Fuzzy_Bubbles] font-bold text-[#f6edd3] text-shadow-lg/20">
                 <img class="w-130 mt-8" src="/assets/images/CheapGriffy.png" alt="">
                 <span class="flex items-center gap-4 text-3xl  stroke">
@@ -20,7 +19,7 @@ import Footer from '../components/Footer.vue'
             </div>
             <WavingGriffy />
         </section>
-        <Footer />
+        
     </section>
 </template>
 
