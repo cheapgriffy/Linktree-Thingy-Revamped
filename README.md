@@ -7,12 +7,12 @@ as a pretext to learn VueJS and Vite, and to have fun with it.<br>
 *especially the fun part*
 
 ## Features
-- 🧱 Random Background
-- 🍃 Background Parallax Effect
-- ⌨️ Parallax Debug overlay
-- 🔘 Dynamic button for links
-- ⌨️ Typewritter effect
-- 👤 Discord Profile Picture link
+-  Random Background
+-  Background Parallax Effect
+-  Parallax Debug overlay
+-  Dynamic button for links
+-  Typewritter effect
+-  Discord Profile Picture link
 
 ---
 
@@ -63,8 +63,8 @@ npm run dev
 
 ## API Used
 
-- [PFP-API](https://github.com/AdvanceFTeam/PFP-API) from [AdvanceFallingTeam](https://github.com/AdvanceFTeam)
-Used for Discord profile picture download.
+- [Laynyard](https://github.com/phineas/lanyard) from [Phineas](https://github.com/Phineas)
+Used to parse discord PFP cdn link
 
 
 
