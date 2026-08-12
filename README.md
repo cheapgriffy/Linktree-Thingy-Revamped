@@ -1,4 +1,6 @@
-# Linktree Thingy Revamped 🌈
+# Linktree Thingy Revamped 
+<img width="870" height="504" alt="image" src="https://github.com/user-attachments/assets/056b9c8f-d992-45e4-90da-f01e660f655a" />
+
 
 A remastered version of my old project, [Linktree Thingy](https://github.com/cheapgriffy/Linktree-thingy), built in VueJS with javascript and vite.
 as a pretext to learn VueJS and Vite, and to have fun with it.<br>
