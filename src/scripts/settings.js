@@ -75,12 +75,10 @@ let links_list = ref([
         active: true,
     },
     {
-        title: "Mes Notes du taf",
-        link: "https://notes.cheapgriffy.fr/",
-        icon_url: "",
+        title: "OnlyFans",
+        link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1",
         active: false,
-    },
-
+    }
 ])
 
 // Personal means they'll be multiple set for each cathegories
@@ -99,6 +97,8 @@ let personal_phrases = [
     "I will respond on both Discord or Telegram, if I'm not overwhelmed '^^",
     "I got my shy periods... so dont take my absence as a offense",
     "W-why are you taking so long on that page... I feel nervous ><",
+    "This were actually the first VueJS project ever build by me",
+    "Then I built the card part right after, so that's why its so different"
 ]
 
 // used as flag in textBox component

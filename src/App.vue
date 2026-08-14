@@ -28,16 +28,16 @@ getProfilePicture(discord_userid)
 		<LinkView v-if="$route.path === '/links'" />
 
 		<!-- Card section -->
-		<section v-else class="flex flex-col justify-between card-background rounded-4xl min-w-[80%] max-w-200 min-h-180 border-[#4E4E4E] paperlike shadow-2xl
+		<section v-else :class="{'card-background-darker': $route.path === '/commission'}" class="flex flex-col justify-between card-background rounded-4xl w-[80%] max-w-300 min-h-180 border-[#4E4E4E] paperlike shadow-2xl transition-all duration-300
 								max-[800px]:w-[99%] max-[800px]:h-[99%]">
 
 			<!-- TODO make a hamburger menu -->
 			<!-- TODO Or swipe left / right to cycle routes -->
 			<nav id="card-navbar" class="bg-[#4d281d] w-full h-23 rounded-t-[1.65rem] flex justify-center items-center gap-5 text-[#ffe894] text-2xl font-['Fuzzy_Bubbles']
 										max-[800px]:hidden">
-				<router-link to="/" class=" p-2 px-5 rounded-full border-[rgb(0,0,0,0)] border-2 hover:border-[#ffe894] transition-all">Home</router-link>
-				<router-link to="/commission" class=" p-2 px-5 rounded-full border-[rgb(0,0,0,0)] border-2 hover:border-[#ffe894] transition-all">Commission</router-link>
-				<router-link to="/links" class=" p-2 px-5 rounded-full border-[rgb(0,0,0,0)] border-2 hover:border-[#ffe894] transition-all">Links</router-link>
+				<router-link to="/" class=" p-2 px-5 rounded-full border-[rgb(0,0,0,0)] border-2 hover:border-[#ffe894] transition-all select-none">Home</router-link>
+				<router-link to="/commission" class=" p-2 px-5 rounded-full border-[rgb(0,0,0,0)] border-2 hover:border-[#ffe894] transition-all select-none">Commission</router-link>
+				<router-link to="/links" class=" p-2 px-5 rounded-full border-[rgb(0,0,0,0)] border-2 hover:border-[#ffe894] transition-all select-none">Links</router-link>
 			</nav>
 
 			<router-view v-slot="{ Component }">
@@ -91,6 +91,12 @@ getProfilePicture(discord_userid)
 .card-background{
 	background-color: #a76a50;
 	background-image: url('/assets/motif/grid.png');
+
+	animation: backgroundIdle 2s linear infinite;
+}
+.card-background-darker{
+	background-color: #2b2223;
+	background-image: url('/assets/motif/grid-lower.png');
 
 	animation: backgroundIdle 2s linear infinite;
 }
