@@ -22,7 +22,7 @@ getProfilePicture(discord_userid)
 
 	<!-- main content -->
 	<section id="content"
-		class="flex flex-col w-full min-h-screen gap-5 justify-center items-center font-[Wondermail] transition-all duration-200 p-5">
+		class="appear-at-display flex flex-col w-full min-h-screen gap-5 justify-center items-center font-[Wondermail] transition-all duration-200 p-5">
 
 		<!-- hardcoded to overide global div -->
 		<LinkView v-if="$route.path === '/links'" />

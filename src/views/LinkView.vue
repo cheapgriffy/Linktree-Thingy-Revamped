@@ -19,7 +19,7 @@ onMounted(() => {
 <template class="transition-all">
     <div class="flex flex-col justify-center items-center gap-5 pt-8 apply-at-display">
         <!-- Header -->
-        <div class="my-10 flex flex-col justify-center items-center gap-5">
+        <div class="appear-at-display my-10 flex flex-col justify-center items-center gap-5">
             <ProfilePicture />
             <TextBox :phrases="personal_phrases" :username="username" sleepTime=50 />
         </div>
@@ -32,20 +32,9 @@ onMounted(() => {
 </template>
 
 <style>
-.appear-at-display{
-    animation: fade-in 0.5s ease-in-out forwards;
-}
+
 .start{
     opacity: 0;
 }
 
-@keyframes fade-in {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
 </style>
