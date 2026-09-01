@@ -9,8 +9,8 @@ const routes= [
     {
         path: '/commission',
         name: 'commission',
-        component: () => import('../views/WIPView.vue'), // TODO TEMP DEBUG
-        // component: () => import('../views/CommissionView.vue'),
+        // component: () => import('../views/WIPView.vue'), // TODO TEMP DEBUG
+        component: () => import('../views/CommissionView.vue'),
     },
     {
         path: '/links',

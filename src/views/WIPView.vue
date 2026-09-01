@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <section class="font-['Fuzzy_Bubbles'] text-[#f6edd3] w-full h-150 flex items-center gap-5 justify-center p-5">
+    <section class="font-['Fuzzy_Bubbles'] text-[#f6edd3] w-full h-110 flex items-center gap-5 justify-center p-5">
         <div class="flex flex-col items-center gap-15 justify-center p-5 w-[60%]">
             <h1 id="wip-h1" class=" text-5xl ">Still Working on it '^^</h1>
             <p class="text-center text-xl">This page is currently being worked on, <br> you might have to wait a bit to see it <br> sowwy sowwy '^^</p>
