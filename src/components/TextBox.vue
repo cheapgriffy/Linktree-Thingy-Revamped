@@ -58,7 +58,7 @@ onMounted(() => {
 
 <template>
     <div class="textbox px-5 py-2 text-2xl">
-        <p class="text-white">
+        <p class="text-white pmd-text-shadow">
             <span class="text-yellow-400">{{ props.username }} : </span>
             <span>{{ displayedText }}</span>
         </p>
@@ -75,5 +75,9 @@ onMounted(() => {
     /* initial size */
     width: calc(241px * 1.6);
     height: calc(53px * 1.6);
+}
+
+.pmd-text-shadow{
+    text-shadow: 1px 1px 0 #000;
 }
 </style>
