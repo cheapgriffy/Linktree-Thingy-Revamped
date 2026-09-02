@@ -136,7 +136,7 @@ onMounted(() => {
         }">
             <div ref="contentRef" :class="['px-4 pb-4 pt-3 flex', contentClass]">
                 <!-- content betweem the tags -->
-                 <span class="bg-[#c1b9a5]/30 w-1.5 rounded-r-2xl mx-3"></span>
+                 <span class="bg-[#c1b9a5]/30 min-w-1 rounded-r-2xl mx-3"></span>
                 <slot />
             </div>
         </div>

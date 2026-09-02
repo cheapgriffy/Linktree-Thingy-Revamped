@@ -1,5 +1,6 @@
 <script setup>
 import CustomDetails from '../components/CustomDetails.vue'
+
 </script>
 
 <template>
@@ -35,8 +36,8 @@ import CustomDetails from '../components/CustomDetails.vue'
                 </ul>
             </div>
         </div>
-        <div class="flex w-[85%]">
-            <div class="w-[60%] ">
+        <div class="w-[85%]">
+            
                 <h2 class="text-3xl">Commission Process</h2>
                 <div class="flex flex-col gap-3 mt-4">
                     <CustomDetails title="Ask, explain your request" open="true" :duration="350"
@@ -47,6 +48,7 @@ import CustomDetails from '../components/CustomDetails.vue'
                                 much detail as possible about your request.</p>
                             <p>Consider including reference images or specific instructions.</p>
                         </div>
+                        <img src="/assets/images/talking-customer-me.gif" class="h-50" alt="">
                     </CustomDetails>
 
                     <CustomDetails title="Sketching" open="true" :duration="350"
@@ -60,19 +62,35 @@ import CustomDetails from '../components/CustomDetails.vue'
                     <CustomDetails title="Confirmation of sketch - Payement" open="true" :duration="350"
                         wrapper-class="rounded-xl overflow-hidden bg-[#2f2121]/30" summary-class="text-xl text-[#99d089] font-bold"
                         content-class="text-[#f6edd3]">
-                        <div class="mb-5">
-                            <p class="w-full mb-5">Once the sketch is fully complete, I will reach to you</p>
-                            <p>At this point, we will discuss the final details and proceed with the payment.</p>
+                        <div class="mb-5 flex flex-col gap-5">
+                            <p class="w-full">Once the sketch is fully complete, I will reach to you, You're allowed to request changes if needed.</p>
+                            <p class="text-[#f6edd3]/30">That's the easiest part to modify ^w^ We can still discuss changes later tho</p>
+                            <p class="w-full">We will discuss the final details and proceed with the payment.</p>
                         </div>
                     </CustomDetails>
-                </div>
-            </div>
-            <div class="w-[40%] ">
 
-            </div>
+                    <CustomDetails title="Rendering the artwork" open="true" :duration="350"
+                        wrapper-class="rounded-xl overflow-hidden bg-[#2f2121]/30" summary-class="text-xl text-[#99d089] font-bold"
+                        content-class="text-[#f6edd3]">
+                        <div class="mb-5 flex flex-col gap-5">
+                            <p class="w-full">I will proceed to render out the piece, you can see updates on <a class="text-blue-200 underline hover:text-white duration-150" href="https://trello.com/b/Hoz3wRbT/griffys-drawing">Trello</a></p>
+                            <p>You're still allowed to ask for changes, but depending on the complexity, it might be charged more.</p>
+                        </div>
+                    </CustomDetails>
+
+                    <CustomDetails title="Artwork complexion" open="true" :duration="350"
+                        wrapper-class="rounded-xl overflow-hidden bg-[#2f2121]/30" summary-class="text-xl text-[#99d089] font-bold"
+                        content-class="text-[#f6edd3]">
+                        <div class="mb-5 flex flex-col gap-5">
+                            <p>I'll reach to you once the piece is finished, depending on wich media we used to contact</p>
+                            <p>I will send you the final version for your aproval. or foward it to a cdn to send it without compression</p>
+                            <p>You're still allowed to ask for changes, but depending on the complexity, it might be charged more.</p>
+                        </div>
+                    </CustomDetails>
+
+
+                </div>
         </div>
 
     </section>
 </template>
-
-<style></style>
