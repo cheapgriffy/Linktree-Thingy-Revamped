@@ -1,7 +1,23 @@
 <script setup>
-// act as flags for components
+
+
+/**
+ * Props for the LinkButton component
+ * @typedef {Object} LinkButtonProps
+ * @property {Object} link_obj - The link object containing title, link, icon_url, and active properties
+ *  {
+ *     title: "Discord",
+ *     link: "https://discord.com/users/584096691473350657",
+ *     icon_url: "/assets/icons/discord_icon.png",
+ *     active: true,
+ * },
+ */
 defineProps({
     link_obj: Object,
+    button_class: {
+        type: String,
+        default: '',
+    },
 })
 
 </script>
@@ -12,7 +28,7 @@ defineProps({
         class="z-1"
         v-if="link_obj.active">
         <button  
-            class="relative link-btn responsive-text bg-[#1f1f1f] text-white rounded-2xl flex justify-center items-center">
+            :class="button_class + ' relative link-btn responsive-text bg-[#1f1f1f] text-white rounded-2xl flex justify-center items-center'">
             <img 
                 v-if="link_obj.icon_url" 
                 :src="link_obj.icon_url" 
