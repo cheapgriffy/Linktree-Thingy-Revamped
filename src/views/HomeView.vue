@@ -14,8 +14,8 @@ import WavingGriffy from '../components/WavingGriffy.vue'
                         max-[800px]:w-full  max-[800px]:z-10">
                 <img class="w-130 mt-8" src="/assets/images/CheapGriffy.png" alt="Handwritten Cheap Griffy">
 
-                <span class="flex items-center gap-4 text-3xl stroke
-                            max-[800px]:text-2xl">
+                <span class="flex items-center justify-center gap-4 text-3xl stroke
+                            max-[800px]:flex-wrap max-[800px]:text-2xl">
                     <p>He/Him</p>
                     <span class="w-2 h-2 bg-[#f6edd3] rounded-full
                                 max-[800px]:w-1.5 max-[800px]:h-1.5"></span>
@@ -23,7 +23,8 @@ import WavingGriffy from '../components/WavingGriffy.vue'
                     <span class="w-2 h-2 bg-[#f6edd3] rounded-full
                                 max-[800px]:w-1.5 max-[800px]:h-1.5"></span>
 
-                    <span class="flex gap-2">
+                    <span class="flex gap-2
+                                max-[800px]:basis-full max-[800px]:justify-center">
                         <img class="w-10 rounded-lg border-[#f6edcc] border-2" src="/assets/images/Flag_of_France.svg.webp" alt="">
                         <img class="w-10 rounded-lg border-[#f6edcc] border-2" src="/assets/images/Flag_of_the_United_States.webp" alt="">
                     </span>
