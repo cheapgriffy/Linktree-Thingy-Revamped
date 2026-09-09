@@ -53,7 +53,7 @@ getProfilePicture(discord_userid)
 
 		<!-- Card section -->
 		<section v-else :class="{ 'card-background-darker': $route.path === '/commission' }" class="flex flex-col justify-between card-background rounded-4xl w-[80%] max-w-300 min-h-180 border-[#4E4E4E] paperlike shadow-2xl transition-all duration-300
-								max-[800px]:w-[99%] max-[800px]:h-[99%] max-[1200px]:w-[95%] max-[1200px]:h-[95%]">
+								max-[800px]:w-full max-[800px]:h-full max-[1200px]:w-[95%] max-[1200px]:h-[95%]">
 
 			<!-- On compact layouts, horizontal swipes cycle through the router pages. -->
 			<nav id="card-navbar" class="bg-[#4d281d] w-full h-23 rounded-t-[1.65rem] flex justify-center items-center gap-5 text-[#ffe894] text-2xl font-['Fuzzy_Bubbles']
