@@ -125,7 +125,7 @@ onMounted(() => {
             ]">
                 ▸
             </span>
-            <span class="select-none font-medium max-[800px]:text-lg">{{ title }}</span>
+            <span class="select-none font-bold max-[800px]:text-lg">{{ title }}</span>
         </button>
 
         <div class="overflow-hidden transition-all ease-out" :style="{

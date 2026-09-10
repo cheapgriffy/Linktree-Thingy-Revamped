@@ -7,12 +7,12 @@ import { curr_bg_image, } from '../scripts/settings.js'
 
 <template>
     <footer class="w-full h-30 rounded-b-3xl flex justify-center items-center bg-[#2b2223] gap-3 p-3 font-[Fuzzy_Bubbles] text-[#f6edd3] text-shadow-lg/20
-                    max-[800px]:text-xs max-[800px]:gap-1 max-[800px]:h-auto max-[800px]:items-start">
-        <div class="h-full w-[33%] max-[800px]:w-[50%]">
+                    max-[800px]:text-xs max-[800px]:gap-1 max-[800px]:h-auto max-[800px]:items-start max-[800px]:flex-col max-[800px]:p-2 max-[800px]:text-center">
+        <div class="h-full w-[33%] max-[800px]:w-full">
             <textWithCondition :content="'Post my art, but credit me'" :correct="true" />
             <textWithCondition :content="'AI training or editing of my art'" :correct="false" />
         </div>
-        <div id="Commission state" class="h-full w-[33%] max-[800px]:w-[50%]">
+        <div id="Commission state" class="h-full w-[33%] max-[800px]:w-full">
             <!-- TODO make "commission open" not hardcoded -->
             <span class="flex gap-2"><strong>Commissions : </strong> <textWithCondition :content="'Open'" :correct="true" /></span>
             <span class="flex gap-2"><strong>Art Trades : </strong> <textWithCondition :content="'Yeees'" :correct="true" /></span>
